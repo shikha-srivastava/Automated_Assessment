@@ -6,6 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.chrome.webdriver import WebDriver
 
+# helper functions
 
 def hover_over_action(driver: WebDriver, by: By, selector: str, timeout: int =100):
     try:

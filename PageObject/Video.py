@@ -7,7 +7,7 @@ from utilities.utils import find_element, hover_over_action
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 
-
+# I have added static time to Just to view the video
 class Automation_video:
 
     def __init__(self, driver: WebDriver):

@@ -9,6 +9,7 @@ class Test_Automated_video:
         self.driver = driver
         self.log_in = Automation_video(self.driver)
 
-    @pytest.mark.Autoamated_video
+    # Test cases to run the test
+    @pytest.mark.Autoamated_video  # used marker
     def test_01(self):
         self.log_in.Video()

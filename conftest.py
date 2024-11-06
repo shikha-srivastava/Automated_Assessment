@@ -7,7 +7,7 @@ from selenium.webdriver.chrome.options import Options
 
 chrome_binary = "C:/Program Files/Google/Chrome/Application/chrome.exe"
 
-
+# setup and tear down
 @pytest.fixture(scope="function")
 def driver(request):
     options = Options()
