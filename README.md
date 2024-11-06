@@ -1,4 +1,4 @@
-﻿# Video - Automation-
+﻿# Video - Automation:
 
 Step-by-Step Guide:
 
