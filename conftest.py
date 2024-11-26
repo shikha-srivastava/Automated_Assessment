@@ -3,17 +3,22 @@ import os.path
 from datetime import datetime
 import pytest
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
 
-chrome_binary = "C:/Program Files/Google/Chrome/Application/chrome.exe"
+chrome_binary = "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe"
+
 
 # setup and tear down
 @pytest.fixture(scope="function")
 def driver(request):
-    options = Options()
-    options.add_argument("--autoplay-policy=no-user-gesture-required")
-    driver = webdriver.Chrome(options=options)
-    driver.maximize_window()
+    options = webdriver.ChromeOptions()
+    options.binary_location = chrome_binary
+    options.add_argument("start-maximized")
+
+    driver = webdriver.Chrome(
+        service=Service("C:/Users/Kushagra/PycharmProjects/chromedriver-win64/chromedriver.exe"),
+        options=options
+    )
     driver.get("https://indeedemo-fyc.watch.indee.tv/")
     request.cls.driver = driver
     try:
