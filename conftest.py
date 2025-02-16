@@ -5,7 +5,7 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 
-chrome_binary = "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe"
+chrome_binary = "D:/Shikha_Srivastava/chrome-win64/chrome.exe"
 
 
 # setup and tear down
@@ -16,7 +16,7 @@ def driver(request):
     options.add_argument("start-maximized")
 
     driver = webdriver.Chrome(
-        service=Service("C:/Users/Kushagra/PycharmProjects/chromedriver-win64/chromedriver.exe"),
+        service=Service("D:/Shikha_Srivastava/chromedriver-win64/chromedriver.exe"),
         options=options
     )
     driver.get("https://indeedemo-fyc.watch.indee.tv/")
